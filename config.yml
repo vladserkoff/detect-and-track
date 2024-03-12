@@ -1,0 +1,13 @@
+coco_relevant_classes:
+  - 2 # car
+  - 3 # motorcycle
+  - 5 # bus
+  - 7 # truck
+tracker:
+  max_track_age: 30
+  min_detections: 5
+road_plane_segmenter:
+  num_frames: 10
+  skip_frames_step_size: 30
+  model_checkpoint: nvidia/segformer-b0-finetuned-cityscapes-768-768
+  road_class_name: road

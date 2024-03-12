@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  traffick-monitor:
+    image: traffick-monitor
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/mnt
+    command: ["python", "-m", "main", "-s", "./data/Video.mp4", "-o", "./outputs/Video.mp4"]
+    environment:
+      LOGLEVEL: "INFO"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

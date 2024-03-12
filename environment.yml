@@ -1,0 +1,25 @@
+name: somecompany
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - fire
+  - matplotlib>=3.7
+  - py-opencv=4.7
+  - pip
+  - python=3.10
+  - pytorch=2.0.1
+  - pytorch-cuda=11.8
+  - safetensors=0.3
+  - scikit-learn>=1.3
+  - torchvision=0.15.2
+  - transformers=4.35
+  - tqdm
+  - ultralytics>=8.0.200,<8.0.300
+  # dev
+  - black
+  - isort
+  - pre-commit
+  - pip:
+      - lapx>=0.5.2 # from ultralytics
